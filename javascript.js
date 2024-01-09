@@ -86,11 +86,9 @@ main.onclick = function (e) {
         splash.remove()
     },4000)
 }
-
-  // اختيار جميع العناصر التي تريد تطبيق التأثير عليها
+  
   const elements = document.querySelectorAll('.taxt');
 
-  // تكرار عبر كل عنصر وتطبيق التأثير على كل واحد منها
   elements.forEach(element => {
       element.innerHTML = element.innerText.split('').map((letter, i) =>
           `<span style="transition-delay: ${i * 40}ms; filter: hue-rotate(${i * 30}deg)">${letter}</span>`
